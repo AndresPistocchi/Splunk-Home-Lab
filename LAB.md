@@ -55,12 +55,9 @@ Now, all I have to do is create the index I mentioned in my **inputs.conf** file
 
 ![Index](images/index.png)
 
-I can now search through the ingested logs by typing index=phishing into the Search in **Search and Reporting** and set the time to **All Time** to ensure all logs are shown. After a few minutes, we are left with over **38000** events! 
+I can now search through the ingested logs by typing index=phishing into the Search in **Search and Reporting** and set the time to **All Time** to ensure all logs are shown. After a few minutes, we are left with over **55000** events! 
 
-
-
-
-
+![Search Results](images/searchresults.png)
 
 
 
