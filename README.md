@@ -6,3 +6,9 @@ Ingest labeled email datasets into Splunk to track over 80 phishing campaigns.
 Analyze user behavior, such as clicks on phishing links, and extract email header information for threat intelligence.
 
 Integrate Snort IDS with Splunk to simulate interactions with phishing emails and monitor suspicious activity in real time.
+
+
+
+images/sign_in.png
+images/receiving_port.png
+images/search_results.png
