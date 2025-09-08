@@ -37,9 +37,25 @@ To ensure the phishing dataset is ingested correctly, I configured two main file
 
 ![Inputs](images/inputs.png)
 
-In outputs.conf, I configured where the monitored data should go. This involved specifying the recieving Splunk Enterprise instance and the port **127.0.0.1:997** to forward the logs. By setting up both of these files, the Universal Forwarder monitors the phishing CSV and reliably forwards the data to my Splunk server.
+In outputs.conf, I configured where the monitored data should go. This involved specifying the recieving Splunk Enterprise instance and the port **127.0.0.1:9997** to forward the logs. By setting up both of these files, the Universal Forwarder monitors the phishing CSV and reliably forwards the data to my Splunk server.
 
 ![Outputs](images/outputs.png)
+
+## Bringing the Data to Splunk
+
+After refreshing the UniversalForwader, I finally can now go to my Splunk Enterprise server. Signed in using the username and password that I created during the installation process.
+
+![Sign In](images/sign_in.png)
+
+Once signed in, I need to make it to where Splunk is recieving data from the same port number as my indexer **9997**. To do this, I went Settings --> Forwarding and Receiving --> Configure recieving and added 9997. 
+
+![Port](images/receiving_port.png)
+
+Now, all I have to do is create the index I mentioned in my **inputs.conf** file. To do this, I went to Settings --> Indexes --> New Index and named it **phishing** while keeping everything else default.
+
+![Index](images/index.png)
+
+I can now search through the ingested logs by typing index=phishing into the Search in **Search and Reporting** and set the time to **All Time** to ensure all logs are shown. After a few minutes, we are left with over **38000** events! 
 
 
 
