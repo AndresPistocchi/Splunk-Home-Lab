@@ -1,0 +1,32 @@
+**INSTALLATION**
+
+**Splunk Enterprise**
+1. Download the latest Splunk Enterprise.
+https://www.splunk.com/en_us/download/splunk-enterprise.html
+Choose installation package based on OS.
+
+2. Run installer as Administrator.
+
+3. Choose default install path (C:\Program Files\Splunk) or customize as needed.
+
+4. Start Splunk as a Windows service.
+
+5. Access the web interface at http://localhost:8000.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Splunk Universal Forwarder**
+1. Download the latest Universal Forwarder.
+https://www.splunk.com/en_us/download/universal-forwarder.html
+
+2. Run installer as Administrator.
+
+3. Accept the default install path (C:\Program Files\SplunkUniversalForwarder).
+
+4. Configure the forwarder by filling in:
+
+Receiving Indexer IP: 127.0.0.1 (same machine) or the IP of the indexer machine
+
+Port: 9997
+
+Deployment Server IP: 127.0.0.1 (same machine) or the IP of the deployment server
+
+Port: 8089
