@@ -1,5 +1,5 @@
 **Configuration**
 
-1. Open Splunk Web at http://localhost:8000 and log in.
+1. Open Splunk Web at http://localhost:8000 and log in. It should look like sign_in.png located in the repository.
 
-<img width="728" height="406" alt="sign_in" src="https://github.com/user-attachments/assets/54c91bfd-0d4c-48fb-a2bd-2da71523b1dc" />
+
