@@ -24,12 +24,13 @@ After running the installer and choosing the default install path, I now need to
 ![Deployment Server](images/configuring_forwarder.png)
 ![Recieving Indexer](images/configuring_indexer.png)
 
-## PHISHING DATASET INGESTION: CEAS_08.csv
+## PHISHING DATASET INGESTION: CEAS_08.csv & TREC_06.csv 
 
 I found this dataset online that had **TONS** of phishing emails and decided to use it. I downloaded it and quickly needed to make the Universal Forwarder monitor this file specifically so it could be ingested into Splunk. 
 
 ![Phishing Data](images/ceas08.png)
 
+![Phishing Data](images/trec06.png)
 
 ## Inputs.conf & Outputs.conf
 
@@ -58,6 +59,20 @@ Now, all I have to do is create the index I mentioned in my **inputs.conf** file
 I can now search through the ingested logs by typing index=phishing into the Search in **Search and Reporting** and set the time to **All Time** to ensure all logs are shown. After a few minutes, we are left with over **55000** events! 
 
 ![Search Results](images/searchresults.png)
+
+## Reviewing Logs & Extract Email Headers for Threat Intelligence
+
+With all of these events, I need to create a query that can simplify the logs into meaningful threat intelligence. Since the dataset already provides fields like sender, receiver, subject, date, URLs, and labels, I can treat them like real email headers and extract useful insights. For example, analyzing the sender field highlights which accounts or domains are most commonly associated with phishing attempts. The first was making the label = 1, 1 meaning that the email is malicious.
+
+![Label query](images/label.png)
+
+This simple query managed to cut our events in half and shows the true amount of 25,462 **phishing** emails. I can now dive into certain emails and investigate for each phishing campaign. 
+
+![Phishing Example](images/phishingexample.png)
+
+
+
+
 
 
 
