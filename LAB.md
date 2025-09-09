@@ -26,7 +26,7 @@ After running the installer and choosing the default install path, I now need to
 
 ## PHISHING DATASET INGESTION: CEAS_08.csv & TREC_06.csv 
 
-I found these two datasets online that had **TONS** of phishing emails and decided to use them. I downloaded them and quickly needed to make the Universal Forwarder monitor this file specifically so it could be ingested into Splunk. 
+I found these two datasets online that had **TONS** of phishing emails and decided to use them. I downloaded them and quickly needed to make the Universal Forwarder monitor these filse specifically so they could be ingested into Splunk. 
 
 ![Phishing Data](images/ceas08.png)
 
@@ -70,11 +70,11 @@ This simple query managed to cut our events in half and shows the true amount of
 
 ![Phishing Example](images/phishinglog.png)
 
-In this log, we can see the sender uses what looks to be a random email **rookcuduq@yahoo.com** stating that ROLEX's are going for $219 *yeah ok**. In the body, they go on to add every luxury watch name and put a very suspicious link at the end that looks like random letters again. 
+In this log, we can see the sender uses what looks to be a random email **rookcuduq@yahoo com** stating that ROLEX's are going for $219 *yeah ok*. In the body, they go on to add every luxury watch name and put a very suspicious link at the end that looks like random letters again. 
 
 ![Phishing Example2](images/phishinglog2.png)
 
-Here is another example of a new phishing campaign trying to manipulate users through cheap website development. The body has a bunch of fake prices and than drops a very suspicious link that looks like gibberish **http://3arsqx949s9mllg83lyq3ll.tertialmb.com/**. Both of these examples seem to target college students due to the **edu** at the receiver's email. 
+Here is another example of a new phishing campaign trying to manipulate users through cheap website development. The body has a bunch of fake prices and than drops a very suspicious link that looks like gibberish **http://3arsqx949s9mllg83lyq3ll.tertialmb com/**. Both of these examples seem to target college students due to the **edu** at the receiver's email. 
 
 
 
