@@ -68,9 +68,13 @@ With all of these events, I need to create a query that can simplify the logs in
 
 This simple query managed to cut our events in half and shows the true amount of 25,462 **phishing** emails. I can now dive into certain emails and investigate for each phishing campaign. 
 
+## Log #1
+
 ![Phishing Example](images/phishinglog.png)
 
 In this log, we can see the sender uses what looks to be a random email **rookcuduq@yahoo com** stating that ROLEX's are going for $219 *yeah ok*. In the body, they go on to add every luxury watch name and put a very suspicious link at the end that looks like random letters again. 
+
+## Log #2
 
 ![Phishing Example2](images/phishinglog2.png)
 
