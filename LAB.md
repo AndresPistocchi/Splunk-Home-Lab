@@ -4,7 +4,7 @@ This repository documents my cybersecurity home lab designed to detect and analy
 
 Ingest labeled email datasets into Splunk to track phishing campaigns.
 
-Analyze user behavior, such as clicks on phishing links, and extract email header information for threat intelligence.
+Simulate & analyze user behavior, such as clicks on phishing links, and extract email header information for threat intelligence.
 
 Integrate Snort IDS with Splunk to simulate interactions with phishing emails and monitor suspicious activity in real time.
 
@@ -80,7 +80,21 @@ In this log, we can see the sender uses what looks to be a random email **rookcu
 
 Here is another example of a new phishing campaign trying to manipulate users through cheap website development. The body has a bunch of fake prices and than drops a very suspicious link that looks like gibberish **http:/3arsqx949s9mllg83lyq3ll.tertialmb com**. Both of these examples seem to target college students due to the **edu** at the receiver's email. 
 
-## Snort IDS & Analyzing User Behavior
+## Installing Snort IDS & Npcap
+
+Since these datasets are archived phishing emails, Snort won't see them in real time. However, we can still use the IDS to replay the traffic and simulate user behavior. To first set up the IDS, we have to install Snort and Npcap.
+
+Install Snort --> https://www.snort.org/downloads
+Install Npcap --> https://npcap.com/ **(install in WinPcap API-compatible mode)**
+
+# Adding Custom Rules & Testing Snort Configuration
+
+Now that everything is downloaded, I need to add Snort rules directly from my dataset to use them for sender-based detection, URL-based detection, and subject-based detection. To do this, I went into the local.rules file in the Snort directory and added them like this.
+
+![Rules](images/rules.png)
+
+With these 3 rules, I can now test the Snort Configuration and run Snort in IDS mode.
+
 
 
 
