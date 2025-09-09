@@ -74,7 +74,7 @@ In this log, we can see the sender uses what looks to be a random email **rookcu
 
 ![Phishing Example2](images/phishinglog2.png)
 
-Here is another example of a new phishing campaign trying to manipulate users through cheap website development. The body has a bunch of fake prices and than drops a very suspicious link that looks like gibberish **http://3arsqx949s9mllg83lyq3ll.tertialmb com/**. Both of these examples seem to target college students due to the **edu** at the receiver's email. 
+Here is another example of a new phishing campaign trying to manipulate users through cheap website development. The body has a bunch of fake prices and than drops a very suspicious link that looks like gibberish **http:/3arsqx949s9mllg83lyq3ll.tertialmb com**. Both of these examples seem to target college students due to the **edu** at the receiver's email. 
 
 
 
