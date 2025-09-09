@@ -26,7 +26,7 @@ After running the installer and choosing the default install path, I now need to
 
 ## PHISHING DATASET INGESTION: CEAS_08.csv & TREC_06.csv 
 
-I found this dataset online that had **TONS** of phishing emails and decided to use it. I downloaded it and quickly needed to make the Universal Forwarder monitor this file specifically so it could be ingested into Splunk. 
+I found these two datasets online that had **TONS** of phishing emails and decided to use them. I downloaded them and quickly needed to make the Universal Forwarder monitor this file specifically so it could be ingested into Splunk. 
 
 ![Phishing Data](images/ceas08.png)
 
