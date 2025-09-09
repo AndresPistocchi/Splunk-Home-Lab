@@ -30,7 +30,7 @@ I found this dataset online that had **TONS** of phishing emails and decided to 
 
 ![Phishing Data](images/ceas08.png)
 
-![Phishing Data](images/trec06.png)
+![Phishing Data](images/trec_06.png)
 
 ## Inputs.conf & Outputs.conf
 
@@ -68,7 +68,7 @@ With all of these events, I need to create a query that can simplify the logs in
 
 This simple query managed to cut our events in half and shows the true amount of 25,462 **phishing** emails. I can now dive into certain emails and investigate for each phishing campaign. 
 
-![Phishing Example](images/phishingexample.png)
+![Phishing Example](images/phishinglog.png)
 
 
 
