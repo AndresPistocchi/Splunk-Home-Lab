@@ -70,8 +70,11 @@ This simple query managed to cut our events in half and shows the true amount of
 
 ![Phishing Example](images/phishinglog.png)
 
+In this log, we can see the sender uses what looks to be a random email **rookcuduq@yahoo.com** stating that ROLEX's are going for $219 *yeah ok**. In the body, they go on to add every luxury watch name and put a very suspicious link at the end that looks like random letters again. 
 
+![Phishing Example2](images/phishinglog2.png)
 
+Here is another example of a new phishing campaign trying to manipulate users through cheap website development. The body has a bunch of fake prices and than drops a very suspicious link that looks like gibberish **http://3arsqx949s9mllg83lyq3ll.tertialmb.com/**. Both of these examples seem to target college students due to the **edu** at the receiver's email. 
 
 
 
