@@ -87,13 +87,23 @@ Since these datasets are archived phishing emails, Snort won't see them in real 
 Install Snort --> https://www.snort.org/downloads
 Install Npcap --> https://npcap.com/ **(install in WinPcap API-compatible mode)**
 
-# Adding Custom Rules & Testing Snort Configuration
+# Adding Custom Rules & Extracting URLS
 
 Now that everything is downloaded, I need to add Snort rules directly from my dataset to use them for sender-based detection, URL-based detection, and subject-based detection. To do this, I went into the local.rules file in the Snort directory and added them like this.
 
 ![Rules](images/rules.png)
 
-With these 3 rules, I can now test the Snort Configuration and run Snort in IDS mode.
+With these 3 rules, I can now extract the URLS from the archived phishing dataset with a python script. I used this script to create a output file of the extracted urls. I managed to extract 4 URLS which we can investigate together.
+
+![Extraction](images/extract_url.png)
+
+I can now use the **curl** to simulate user interaction with these URLs. **CAUTION** Do not run curl on the original malicious URLs from the phishing dataset, as doing so could expose your system to malware or other attacks. Instead, you should either redirect the URLs to a safe local server, replace them with harmless placeholders, or use captured PCAP traffic to simulate requests. This allows Snort to detect the activity safely without ever connecting to a live malicious site.
+
+
+
+
+
+
 
 
 
