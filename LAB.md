@@ -6,7 +6,7 @@ Ingesting labeled phishing email datasets (CEAS_08, TREC_06) into Splunk and ind
 
 Extracting email header fields and URLs for threat intelligence and campaign tracking (sender, recipient, subject, timestamps, URLs, labels).
 
-Simulating user behavior (safe curl/replay of extracted URLs or replayed PCAPs) so Snort can generate detection events that integrate with Splunk dashboards.
+Simulating user behavior (safe curl/replay of extracted URLs) so Snort can generate detection events that integrate with Splunk dashboards.
 
 Adding custom Snort rules (sender-, URL-, and subject-based) and forwarding IDS alerts to Splunk for real-time monitoring.
 
@@ -108,7 +108,11 @@ The 4 urls that we will use curl to simulate user behavior are the following. No
 
 ![urls](images/urls.png)
 
+Unfortunately, the extracted phishing domains were offline/archived at test time. However, to simulate any URL interaction safely, one good example is to simulate it locally or run inside an isolated VM. To simulate locally, run a simple HTTP server and use curl --resolve through these steps.
 
+**python -m http.server 8080**
+
+**curl -v --resolve "051.thingswithdiets.com:8080:127.0.0.1" "http://051.thingswithdiets.com:8080/"**
 
 
 
