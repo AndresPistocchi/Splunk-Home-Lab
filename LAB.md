@@ -2,12 +2,15 @@
 
 This repository documents my cybersecurity home lab designed to detect and analyze phishing campaigns using Splunk and Snort. The lab demonstrates how to:
 
-Ingest labeled email datasets into Splunk to track phishing campaigns.
+Ingesting labeled phishing email datasets (CEAS_08, TREC_06) into Splunk and indexing them for search and analysis.
 
-Simulate & analyze user behavior, such as clicks on phishing links, and extract email header information for threat intelligence.
+Extracting email header fields and URLs for threat intelligence and campaign tracking (sender, recipient, subject, timestamps, URLs, labels).
 
-Integrate Snort IDS with Splunk to simulate interactions with phishing emails and monitor suspicious activity in real time.
+Simulating user behavior (safe curl/replay of extracted URLs or replayed PCAPs) so Snort can generate detection events that integrate with Splunk dashboards.
 
+Adding custom Snort rules (sender-, URL-, and subject-based) and forwarding IDS alerts to Splunk for real-time monitoring.
+
+Best practices and safety notes for working with archived malicious URLs (how to avoid contacting live malicious hosts).
 
 ## Installing Splunk Enterprise and Splunk UniversalForwarder
 
@@ -98,6 +101,18 @@ With these 3 rules, I can now extract the URLS from the archived phishing datase
 ![Extraction](images/extract_url.png)
 
 I can now use the **curl** to simulate user interaction with these URLs. **CAUTION** Do not run curl on the original malicious URLs from the phishing dataset, as doing so could expose your system to malware or other attacks. Instead, you should either redirect the URLs to a safe local server, replace them with harmless placeholders, or use captured PCAP traffic to simulate requests. This allows Snort to detect the activity safely without ever connecting to a live malicious site.
+
+# User Simulation
+
+The 4 urls that we will use curl to simulate user behavior are the following. Notice how all of them are random words and use **HTTP** rather than **HTTPS** *suspicious*
+
+![urls](images/urls.png)
+
+
+
+
+
+
 
 
 
